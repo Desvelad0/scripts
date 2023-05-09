@@ -6,7 +6,7 @@
 # to delete one of the resource groups after a confirmation.
 #
 # Dependancies for this script are azure-core, azure-identity, azure-mgmt-resource and inquirer. 
-# Additionally, in order to use the script you have to have installed the PowerShell module Az and be connected to a priviliged user in the tenant of the 
+# Additionally, in order to use the script you have to have installed the PowerShell module Az and be authenticated with a priviliged user in the tenant of the 
 # subscription of which you want to be managing resources of. After installing the module, you can authenticate using Connect-AzAccount.
 
 import os
