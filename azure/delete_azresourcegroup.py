@@ -1,4 +1,4 @@
-# Author: PixelDu5t
+# Author: Desvelad0
 # Made with the help of OpenAI's ChatGPT and Azure SDK for Python documentation (https://learn.microsoft.com/en-us/azure/developer/python/sdk/azure-sdk-overview)
 # 
 # Description: This script uses the Azure SDK for Python in order to delete any resource group associated with the current environment variable
