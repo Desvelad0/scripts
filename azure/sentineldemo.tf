@@ -55,28 +55,28 @@ resource "azurerm_monitor_data_collection_rule" "sentinel_dcr" {
   }
 
   data_sources {
-    windows_event_log {
-      streams = ["Microsoft-SecurityEvent"]
-      name    = "application-logs"
-      x_path_queries = [
-        "Application!*[System[(Level=1 or Level=2 or Level=3)]]"
-      ]
-    }
-    windows_event_log {
-      streams = ["Microsoft-SecurityEvent"]
-      name    = "security-logs"
-      x_path_queries = [
-        "Security!*[System[(EventID=4625)]]"
-      ]
-    }
-    windows_event_log {
-      streams = ["Microsoft-SecurityEvent"]
-      name    = "system-logs"
-      x_path_queries = [
-        "System!*[System[(Level=1 or Level=2 or Level=3)]]"
-      ]
-    }
+  windows_event_log {
+    streams = ["Microsoft-WindowsEvent"]
+    name    = "application-logs"
+    x_path_queries = [
+      "Application!*[System[(Level=1 or Level=2 or Level=3)]]"
+    ]
   }
+  windows_event_log {
+    streams = ["Microsoft-SecurityEvent"]
+    name    = "security-logs"
+    x_path_queries = [
+      "Security!*[System[(EventID=4625)]]"
+    ]
+  }
+  windows_event_log {
+    streams = ["Microsoft-SystemEvent"]
+    name    = "system-logs"
+    x_path_queries = [
+      "System!*[System[(Level=1 or Level=2 or Level=3)]]"
+    ]
+  }
+}
 
 
   data_flow {
